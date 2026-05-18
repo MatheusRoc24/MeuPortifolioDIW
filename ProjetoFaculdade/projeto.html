@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StudyHub</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body id="top">
+
+    <header>
+        <div class="header-container">
+            <div class="header-left">
+                <a href="#top" class="logo-link">
+                    <h1>Estudos</h1>
+                </a>
+                <p> Projeto de desenvolvimento de IW</p>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+        <nav class="menu" id="menu">
+            <ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section class="subjects">
+
+        </section>
+
+    </main>
+
+    <footer>
+
+        <p>Projeto Faculdade</p>
+
+    </footer>
+
+
+</body>
+
+<script>
+    const menuToggle = document.getElementById('menuToggle');
+    const menu = document.getElementById('menu');
+
+    menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active');
+        menu.classList.toggle('active');
+    });
+
+    // Fechar menu ao clicar em um link
+    const menuLinks = menu.querySelectorAll('a');
+    menuLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            menuToggle.classList.remove('active');
+            menu.classList.remove('active');
+        });
+    });
+</script>
+
+</body>

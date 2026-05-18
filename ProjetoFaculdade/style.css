@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-color: #0f172a;
+    color: white;
+}
+
+header{
+    width: 100%;
+    background-color: #111827;
+    border-bottom: 1px solid #1e293b;
+}
+
+.header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.header-left{
+    flex: 1;
+}
+
+.logo-link{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    transition: 0.2s;
+    display: inline-block;
+}
+
+.logo-link:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+header h1{
+    font-size: 32px;
+}
+
+header p{
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+.menu-toggle{
+    display: flex;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 6px;
+    padding: 10px;
+}
+
+.menu-toggle span{
+    width: 28px;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: 0.3s;
+}
+
+.menu-toggle.active span:nth-child(1){
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.menu-toggle.active span:nth-child(2){
+    opacity: 0;
+}
+
+.menu-toggle.active span:nth-child(3){
+    transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.menu{
+    display: none;
+    background-color: #1e293b;
+    padding: 20px;
+    border-top: 1px solid #334155;
+}
+
+.menu.active{
+    display: block;
+}
+
+.menu ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu ul li a{
+    color: #38bdf8;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.menu ul li a:hover{
+    color: #38bdf8;
+    padding-left: 10px;
+}
+
+
+main{
+    width: 100%;
+    padding: 30px;
+}
+
+.subjects{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+}
+
+.card{
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 12px;
+    transition: 0.2s;
+    border: 1px solid #334155;
+}
+
+.card:hover{
+    transform: translateY(-5px);
+}
+
+.card h2{
+    margin-bottom: 10px;
+    color: #38bdf8;
+}
+
+.card p{
+    color: #cbd5e1;
+    margin-bottom: 15px;
+}
+
+.content-list{
+    list-style: none;
+}
+
+.content-list li{
+    padding: 10px;
+    background-color: #0f172a;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    border-left: 4px solid #38bdf8;
+}
+
+footer{
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+    border-top: 1px solid #1e293b;
+    margin-top: 30px;
+}
+
